@@ -41,7 +41,7 @@ while True:
     except:
         print('Please, enter a valid number, 1,2 or 3\n')
 computer = randint(0,3)
-
+game_image = [rock, paper, scissors]
 
 ##############################
 #   1 Paper win 0 Rock       #
@@ -52,58 +52,40 @@ computer = randint(0,3)
 if choice == 0:
     if computer == 2:
         #user win rock / scissors
-        print(rock)
-        print("computer chose:")
-        print(scissors)
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("You WIN!!!")
         
     elif computer == 1:
         #computer win rock / paper
-        print(rock)
-        print("computer chose:")
-        print(paper)
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("You LOSE!")
     else:
         #draw  rock / rock
-        print(rock)
-        print("Computer chose:")
-        print(rock)
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("It's a DRAW!")
 elif choice == 1:
     if computer == 2:
-         #computer win paper / scissors
-        print(paper)
-        print("computer chose:")
-        print(scissors)
+        #computer win paper / scissors
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("You LOSE!")
     elif computer == 1:
         #draw  paper / paper
-        print(paper)
-        print("Computer chose:")
-        print(paper)
-        print("It's a DRAW!")
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
+        print("It is a DRAW!")
     else:
         #user win paper / rock
-        print(paper)
-        print("computer chose:")
-        print(rock)
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("You WIN!!!")
 else:
     if computer == 2:
         #draw scissors / scissors
-        print(scissors)
-        print("Computer chose:")
-        print(scissors)
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("It's a DRAW!")
     elif computer == 1:
         #user win scissors / paper
-        print(scissors)
-        print("computer chose:")
-        print(paper)
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("You WIN!!!")
     else:
         #computer win scissors / rock
-        print(scissors)
-        print("computer chose:")
-        print(rock)
+        print(f'{game_image[choice]}\nComputer chose: \n{game_image[computer]}')
         print("You LOSE!")
