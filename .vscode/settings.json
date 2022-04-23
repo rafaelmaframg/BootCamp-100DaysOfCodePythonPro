@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Day7/modules"
+    ]
+}
