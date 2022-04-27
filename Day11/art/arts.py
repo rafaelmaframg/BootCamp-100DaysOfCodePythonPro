@@ -41,7 +41,7 @@ def card(user, computer):
 {''.join([f'│{check(x)}       │' for x in user])}    │░░░░░░░░░│{''.join([f'│{check(x)}       │' for x in computer[1:]])}
 {''.join(['│         │' for x in user])}    │░░░░░░░░░│{''.join(['│         │' for x in computer[1:]])}
 {''.join(['│         │' for x in user])}    │░░░░░░░░░│{''.join(['│         │' for x in computer[1:]])} 
-{''.join([f'│    {nipe}    │' for x in user])}    │░░░░░░░░░│{''.join([f'│    {nipe}    │' for x in computer[1:]])}
+{''.join([f'│    {x[-1]}    │' for x in user])}    │░░░░░░░░░│{''.join([f'│    {x[-1]}    │' for x in computer[1:]])}
 {''.join(['│         │' for x in user])}    │░░░░░░░░░│{''.join(['│         │' for x in computer[1:]])}
 {''.join(['│         │' for x in user])}    │░░░░░░░░░│{''.join(['│         │' for x in computer[1:]])} 
 {''.join([f'│       {check(x)}│' for x in user])}    │░░░░░░░░░│{''.join([f'│       {check(x)}│' for x in computer[1:]])}
@@ -68,7 +68,7 @@ def card_pc(user, computer):
 {''.join([f'│{check(x)}       │' for x in user])}    {''.join([f'│{check(x)}       │' for x in computer])}
 {''.join(['│         │' for x in user])}    {''.join(['│         │' for x in computer])}
 {''.join(['│         │' for x in user])}    {''.join(['│         │' for x in computer])} 
-{''.join([f'│    {nipe}    │' for x in user])}    {''.join([f'│    {nipe}    │' for x in computer])}
+{''.join([f'│    {x[-1]}    │' for x in user])}    {''.join([f'│    {x[-1]}    │' for x in computer])}
 {''.join(['│         │' for x in user])}    {''.join(['│         │' for x in computer])}
 {''.join(['│         │' for x in user])}    {''.join(['│         │' for x in computer])} 
 {''.join([f'│       {check(x)}│' for x in user])}    {''.join([f'│       {check(x)}│' for x in computer])}
