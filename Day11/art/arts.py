@@ -8,13 +8,18 @@ def check(num):
         Returns:
             (String): Return a string with the design.
     """
-    if num == 11 or num == 1:
+    
+    
+    if num[:2] == '10':
+        dig = '0'
+        num = '1'
+
+    elif num[0] == 'A' or num[0] == '1':
         num = 'A'
         dig = ' '
-    elif num > 9:
-        dig = num - 10
-        num = 1
+    
     else:
+        num = num[0]
         dig = ' '
     return f'{num}{dig}'
 

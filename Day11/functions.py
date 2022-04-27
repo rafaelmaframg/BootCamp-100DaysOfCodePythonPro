@@ -2,7 +2,7 @@ from os import system, name
 import random
 
 
-cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+cards = ['A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥']
 
 def clear():
     #for windows
@@ -38,5 +38,16 @@ def sum_Of_elements(lista):
     """
     sumof = 0
     for element in lista:
-        sumof += element
+        if element[:2] == '10' or element[0] in 'JQK':
+            sumof += 10
+        elif element[0] == 'A':
+            sumof += 11
+        else:
+            sumof += int(element[0])
     return sumof
+
+def check_as(lista):
+    for i in lista:
+        if i[0] == 'A':
+            return i[1]
+    return False
