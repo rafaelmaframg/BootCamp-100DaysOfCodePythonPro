@@ -1,3 +1,18 @@
+
+def turn_off(status):
+    """
+        Function to turn on or turn off the coffee machine.
+  
+        Parameters:
+            status(bool): Actual machine status.
+          
+        Returns:
+            (bool): return True or False to turn on or turn off the machine.
+    """
+    if status == True:
+        return False
+    return True
+
 MENU = {
     "espresso": {
         "ingredients": {
@@ -30,19 +45,28 @@ resources = {
     "coffee": 100,
 }
 
+MACHINE_FUNCTIONS = {'off': turn_off}
+
+machine_on = True
 
 # TODO 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 #a. Check the user’s input to decide what to do next.
 #b. The prompt should show every time action has completed, e.g. once the drink is
 #dispensed. The prompt should show again to serve the next customer.
 
-print("What would you like? (espresso/latte/cappuccino): ")
+
+while machine_on:
+    choice = str(input("What would you like? (espresso/latte/cappuccino): ")).lower()
+
+    if choice in MENU:
+        print(f'Here is your {choice} ☕️. Enjoy!')
 
 
+    elif choice in MACHINE_FUNCTIONS:
+        machine_on =  MACHINE_FUNCTIONS[0](machine_on)
 
-
-
-
+    else:
+        print('Please, enter a valid option')
 
 
 #TODO 2. Turn off the Coffee Machine by entering “off” to the prompt.
