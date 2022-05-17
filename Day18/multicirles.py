@@ -2,6 +2,7 @@ import turtle as t
 import random
 
 timmy = t.Turtle()
+timmy.hideturtle()
 timmy.speed("fastest")
 t.colormode(255)
 
