@@ -1,6 +1,5 @@
 from art import logo
 
-
 def add(a,b):
     """Return a sum of parameters a and b"""
     return a + b

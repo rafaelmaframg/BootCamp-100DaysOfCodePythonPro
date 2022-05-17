@@ -1,0 +1,1 @@
+![Screenshot](https://github.com/rafaelmaframg/BootCamp-100DaysOfCodePythonPro/blob/main/Day9-SecretAuction/indice.png)
