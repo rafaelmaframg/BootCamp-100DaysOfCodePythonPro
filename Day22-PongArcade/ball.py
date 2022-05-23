@@ -1,23 +1,27 @@
 from turtle import Turtle
 
 
+
+
 class Ball(Turtle):
-    
+
     def __init__(self) -> None:
         super().__init__()
         self.shape("circle")
         self.color("white")
-    
-    def moving(self, status):
-        game_on = status
-        while game_on:
-            if self.xcor() <= 360:
-                new_y = self.ycor() -10
-                new_x = self.xcor() -10
-                self.goto(new_x, new_y)
-            else:
-                new_y = self.ycor() +10
-                new_x = self.xcor() +10
-                self.goto(new_x, new_y)
+        self.y_increment = 10
+        self.x_increment = 10
+
+    def moving(self):
+        new_y = self.ycor() + self.y_increment
+        new_x = self.xcor() + self.x_increment
+        self.goto(new_x, new_y)
+        if self.ycor() == 280 or self.ycor() == -280:
+            self.y_increment *= -1
+
+    def bounce_x(self):
+        self.x_increment *= -1
+
+        
 
 
