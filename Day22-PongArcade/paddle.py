@@ -26,3 +26,7 @@ class Paddle(Turtle):
             self.goto(self.xcor(), self.ycor()-20 )
         else:
             pass
+
+    def reset(self) -> None:
+        self.__init__(self.player)
+        

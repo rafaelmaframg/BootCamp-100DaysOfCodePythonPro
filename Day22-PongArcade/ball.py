@@ -11,6 +11,7 @@ class Ball(Turtle):
         self.color("white")
         self.y_increment = 10
         self.x_increment = 10
+        self.penup()
 
     def moving(self):
         new_y = self.ycor() + self.y_increment
@@ -22,6 +23,8 @@ class Ball(Turtle):
     def bounce_x(self):
         self.x_increment *= -1
 
-        
+    def reset(self) -> None:
+        self.__init__()
+
 
 
