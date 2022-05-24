@@ -1,9 +1,9 @@
 from turtle import Turtle
 
 
-
-
 class Ball(Turtle):
+
+    velocity = 5
 
     def __init__(self) -> None:
         super().__init__()
@@ -23,8 +23,13 @@ class Ball(Turtle):
     def bounce_x(self):
         self.x_increment *= -1
 
-    def reset(self) -> None:
-        self.__init__()
+    def reset_ball(self) -> None:
+        self.goto(0,0)
+        self.bounce_x()
+
+    def increment_velocity(self):
+        self.y_increment += 10
+        self.x_increment += 10
 
 
 

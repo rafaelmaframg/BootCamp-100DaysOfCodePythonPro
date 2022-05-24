@@ -4,15 +4,11 @@ class Paddle(Turtle):
     
     def __init__(self, player) -> None:
         super().__init__()
-        self.player = player
         self.shape("square")
         self.color("white")
         self.speed("fastest")
         self.penup()
-        if player == 1:
-            self.goto(-350, 0)
-        else:
-            self.goto(350, 0)
+        self.reset(player)
         self.shapesize(stretch_wid=5, stretch_len=1)
     
     def move_up(self):
@@ -27,6 +23,9 @@ class Paddle(Turtle):
         else:
             pass
 
-    def reset(self) -> None:
-        self.__init__(self.player)
+    def reset(self, player) -> None:
+        if player == 2:
+            self.goto(-350, 0)
+        else:
+            self.goto(350, 0)
         

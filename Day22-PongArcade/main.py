@@ -26,24 +26,37 @@ screen.onkey(p2.move_up,"w")
 screen.onkey(p2.move_down,"s")
 
 
-
 game_on = True
+timer = 10
+divisor = 100
 while game_on:
-    time.sleep(0.1)
+    if timer == 0:
+        timer = 10
+        divisor = 1000
+    time.sleep(timer/divisor)
     screen.update()
     ball.moving()
-    if ball.distance(p2) < 50 and ball.xcor() > 320 or ball.distance(p1) < 50 and ball.xcor() < -320:
+    
+    if ball.distance(p1) < 50 and ball.xcor() > 320 or ball.distance(p2) < 50 and ball.xcor() < -320:
+        timer -= 1
         ball.bounce_x()
-    if  ball.xcor() < -400:
-        ball.reset()
-        p1.reset()
+
+    if  ball.xcor() < -380:
+        ball.reset_ball()
+        p1.reset(1)
+        p2.reset(2)
+        timer = 10
+        divisor = 100
         score.increment(2)
         score.show_score()
 
-    elif ball.xcor() > 400:
-        p2.reset()
-        ball.reset()
-        score.increment(1)
+    elif ball.xcor() > 380:
+        ball.reset_ball()
+        p2.reset(2)
+        p1.reset(1)
+        timer = 10
+        divisor = 100  
+        score.increment(1) 
         score.show_score()
         
 
