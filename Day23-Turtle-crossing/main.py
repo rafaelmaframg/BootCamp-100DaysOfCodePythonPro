@@ -23,8 +23,11 @@ while game_is_on:
     for car in cars.all_cars:
         if car.distance(player) < 20:
             game_is_on = False
+            score.write_game_over()
     if player.ycor() > 280:
         player.finish_line()
         cars.level_up()
+        score.level += 1
+        score.write_screen(score.level)
 
 screen.exitonclick()
