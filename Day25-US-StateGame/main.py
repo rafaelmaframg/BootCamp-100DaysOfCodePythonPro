@@ -52,9 +52,7 @@ dic_to_export = {
     "state":[]
 }
 
-for state in df_states:
-    if state not in guessed_states:
-        dic_to_export["state"].append(state)
+dic_to_export["state"] = [ state for state in df_states if state not in guessed_states ]
 
 df_to_export = pd.DataFrame(dic_to_export)
 df_to_export.to_csv(os.path.join(path, 'non-guessed.csv'))
