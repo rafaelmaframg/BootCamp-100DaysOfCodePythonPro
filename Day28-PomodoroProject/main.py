@@ -61,7 +61,7 @@ def counter(count):
         minutes = f"0{minutes}"
     canvas.itemconfig(timer, text=f'{minutes}:{seconds}')
     if count > 0:
-        loop = myapp.after(10, counter, count -1)
+        loop = myapp.after(1000, counter, count -1)
     else:
         start_counter()
 
