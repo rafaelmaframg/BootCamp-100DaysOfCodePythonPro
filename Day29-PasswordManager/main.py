@@ -1,20 +1,52 @@
+from copy import copy
+import pyperclip 
 import tkinter as tk
 from tkinter import messagebox
+import random
 import os
 
 
 
-path = os.path.dirname(__file__)
+PATH = os.path.dirname(__file__)
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
+def generate_password():
+    entry_password.delete(0, last='end')
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+
+    nr_letters= random.randint(8,10)
+    nr_symbols = random.randint(2,4)
+    nr_numbers = random.randint(2,4)
+    password = [ random.choice(letters) for _ in range(nr_letters)] + \
+               [ random.choice(symbols) for _ in range(nr_symbols)] + \
+               [ random.choice(numbers) for _ in range(nr_numbers)]
+
+    random.shuffle(password)
+    password = ''.join(password)
+    pyperclip.copy(password)
+    entry_password.insert(index=0, string=password)
+
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_data():
-    with open(os.path.join(path,'data.txt'), 'a') as file:
-        file.write(f"{entry_website.get()} | {entry_email.get()} | {entry_password.get()}\n")
-    entry_password.delete(0, last='end')
-    entry_website.delete(0, last='end')
-    messagebox.showinfo(message='Done!', title="Done!")
+    website = entry_website.get()
+    email = entry_email.get()
+    password = entry_password.get()
+
+
+    if website != "" and email != "" and password != "":
+        with open(os.path.join(PATH, 'data.txt'), 'a') as file:
+            file.write(f"{website} | {email} | {password}\n")
+        entry_password.delete(0, last='end')
+        entry_website.delete(0, last='end')
+        messagebox.showinfo(message='Done!', title="Done!")
+    
+    else:
+        messagebox.showerror(message="Please, don't leave any fields empty!", title="ERROR!")
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = tk.Tk()
@@ -22,7 +54,7 @@ window.config(pady=50, padx=50)
 window.title("My Password Manager")
 
 logo = tk.Canvas(width=150, height=200)
-img = tk.PhotoImage(file=os.path.join(path, 'logo.png'))
+img = tk.PhotoImage(file=os.path.join(PATH, 'logo.png'))
 logo.create_image(70, 100, image=img)
 logo.grid(row=0, column=1)
 
@@ -46,7 +78,7 @@ lbl_password.grid(row=3, column=0)
 entry_password = tk.Entry(width=24)
 entry_password.grid(row=3, column=1)
 
-btn_generate = tk.Button(text="Generate Password")
+btn_generate = tk.Button(text="Generate Password", command=generate_password)
 btn_generate.grid( row=3, column=2)
 
 btn_add = tk.Button(text="ADD", width=36, command=save_data)
