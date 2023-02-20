@@ -31,6 +31,3 @@ for bday in birthdays.iterrows():
 
 
 
-
-
-

@@ -1,0 +1,164 @@
+body {
+    text-align: center;
+    margin: 0;
+    background-color: white;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 50px auto 0 auto;
+    font-family: 'Dancing Script', cursive;
+    color: #7B2869;
+    line-height: 2;
+}
+
+p {
+       line-height: 2;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 50px auto 0 auto;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #7B2869;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #7B2869;
+}
+
+
+hr {
+    margin: 40px auto;
+    border-top-style: dotted;
+    width: 40px;
+    border-top-width: 6px;
+    color: #7B2869;
+}
+
+#menu {
+
+   background-color: #E5D1FA;
+    position: fixed;
+    padding-top: 30px;
+      top: 0;
+     width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 1;
+}
+
+
+
+
+#menu a {
+  color: #7B2869;
+  text-align: center;
+     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 50px 40px 0 20px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+.menu a:hover{
+    background-color: #ECF2FF;
+}
+
+.top-container {
+    position: relative;
+    padding-top: 100px;
+    background-color: #ECF2FF;
+}
+
+.middle-container {
+    margin: 100px auto 100px;
+}
+
+.bottom-container {
+    margin: 0;
+    padding: 20px;
+ background-color: #E5D1FA;
+}
+
+.skill-row{
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+
+}
+.top-cloud {
+    width: 150px;
+    position: absolute;
+    right: 450px;
+    top: 50px;
+}
+.bottom-cloud {
+    width: 150px;
+    position: absolute;
+    left: 600px;
+    bottom: 300px;
+
+}
+
+.img-class {
+    width: 15%;
+    float: left;
+    margin-right: 30px;
+}
+
+.img-skills{
+    width: 15%;
+    float: right;
+    margin-left: 30px;
+}
+
+.img-contact {
+    width: 5%;
+}
+
+.btn {
+  background: #d2b7f0;
+
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+    font-family: Arial, serif;
+  color: #8c0d8c;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #E3DFFD;
+  text-decoration: none;
+}
+
+.links {
+     background: #d2b7f0;
+    font-family: Arial, Serif;
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+  border-radius: 8px;
+     color: #8c0d8c;
+    text-decoration: none;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+
+.links:hover {
+     background: #E3DFFD;
+    text-decoration: none;
+}
+
+.intro{
+    width: 20%;
+    margin: auto;
+}
+
+
