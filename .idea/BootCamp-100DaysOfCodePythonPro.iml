@@ -8,8 +8,9 @@
       <excludeFolder url="file://$MODULE_DIR$/Day61 -WTF_forms/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Day62-coffee&amp;wifi/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Day63-Databases-SQLite-SQLAclhemy/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Day64-Top10_movies_sqlalchemy/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (BootCamp-100DaysOfCodePythonPro) (6)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (BootCamp-100DaysOfCodePythonPro) (7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
