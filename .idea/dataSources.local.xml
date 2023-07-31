@@ -19,5 +19,14 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="blog" uuid="7b7f639c-9c6d-4910-b9f1-6f1f5a343931">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
   </component>
 </project>

@@ -13,8 +13,9 @@
       <excludeFolder url="file://$MODULE_DIR$/Day67-Restful-blog/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Day68-Authentication/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Day69-70-Blog_register_userswithHash/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Day72-DataVisualisationMatplotlib/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (BootCamp-100DaysOfCodePythonPro) (11)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (BootCamp-100DaysOfCodePythonPro) (12)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
